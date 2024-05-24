@@ -34,8 +34,8 @@ const Login: React.FC = () => {
           />
           <div className="relative bg-blue-700 bg-opacity-20 w-full h-full" />
         </section>
-        <section className="flex flex-col items-end justify-center w-full md:w-3/5 p-0 bg-blue-700 text-white">
-          <div className="w-full max-w-lg ">
+        <section className="flex flex-col items-end justify-center w-full md:w-3/5 pb-80 bg-blue-700 text-white">
+          <div className="w-full max-w-lg pr-50 ">
             <Image
              src={MikeLogoSlogan}
               alt="Logo"
