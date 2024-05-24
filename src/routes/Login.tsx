@@ -1,5 +1,6 @@
 import React from "react";
 import mikelogo from '../assets/mikelogo.svg'
+import MikeLogoSlogan from '../assets/MikeLogoSlogan.svg'
 
 interface ImageProps {
   src: string;
@@ -34,9 +35,9 @@ const Login: React.FC = () => {
           <div className="relative bg-blue-700 bg-opacity-20 w-full h-full" />
         </section>
         <section className="flex flex-col items-end justify-center w-full md:w-3/5 p-0 bg-blue-700 text-white">
-          <div className="w-full max-w-lg pt-50">
+          <div className="w-full max-w-lg ">
             <Image
-             src={mikelogo}
+             src={MikeLogoSlogan}
               alt="Logo"
               className="w-full"
             />
