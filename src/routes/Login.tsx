@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 interface ImageProps {
   src: string;
@@ -14,65 +14,58 @@ interface IconLabelProps {
   label: string;
 }
 const IconLabel: React.FC<IconLabelProps> = ({ iconSrc, label }) => (
-  <div className="flex gap-5 self-start text-3xl font-light text-white whitespace-nowrap">
-    <Image src={iconSrc} alt="" className="shrink-0 aspect-square w-[37px]" />
-    <div className="flex-auto self-start italic">{label}</div>
+  <div className="flex gap-5 text-3xl font-light text-white">
+    <Image src={iconSrc} alt={label} className="shrink-0 w-9 h-9" />
+    <div className="italic">{label}</div>
   </div>
 );
 
 const Login: React.FC = () => {
   return (
-    <main className="bg-white">
-      <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-        <section className="flex flex-col w-[41%] max-md:ml-0 max-md:w-full">
-          <div className="flex overflow-hidden relative flex-col grow justify-center py-px min-h-[1160px] max-md:max-w-full">
-            <Image
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/b84e908038c077e02a1562e4f24dbed83f5362f6c75c44829b09b51fbbb407bd?apiKey=91a1d4223fb149a1a197b80828621a6c&"
-              alt=""
-              className="object-cover absolute inset-0 size-full"
-            />
-            <div className="relative shrink-0 bg-blue-700 bg-opacity-20 h-[1159px] max-md:max-w-full" />
-          </div>
+    <main className="bg-white min-h-screen flex flex-col items-center justify-center">
+      <div className="flex gap-5 md:flex-row flex-col w-full max-w-6xl">
+        <section className="relative flex flex-col justify-center w-full md:w-2/5 min-h-[1160px]">
+          <Image
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/b84e908038c077e02a1562e4f24dbed83f5362f6c75c44829b09b51fbbb407bd?apiKey=91a1d4223fb149a1a197b80828621a6c&"
+            alt="Background"
+            className="absolute inset-0 object-cover w-full h-full"
+          />
+          <div className="relative bg-blue-700 bg-opacity-20 w-full h-full" />
         </section>
-        <section className="flex flex-col ml-5 w-[59%] max-md:ml-0 max-md:w-full">
-          <div className="flex flex-col grow justify-center items-end px-16 py-20 w-full bg-blue-700 max-md:px-5 max-md:max-w-full">
-            <div className="flex flex-col mt-24 mr-14 max-w-full w-[557px] max-md:mt-10 max-md:mr-2.5">
-              <Image
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a44dae2fcd9b1fbe3574a39c692565c2f69e16f6c1e6798d673d0b8e0f81faa?apiKey=91a1d4223fb149a1a197b80828621a6c&"
-                alt=""
-                className="w-full aspect-[2.38] max-md:max-w-full"
-              />
-              <form className="flex flex-col pl-3.5 mt-36 max-md:mt-10 max-md:max-w-full">
+        <section className="flex flex-col items-end justify-center w-full md:w-3/5 p-16 bg-blue-700 text-white">
+          <div className="w-full max-w-lg">
+            <Image
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a44dae2fcd9b1fbe3574a39c692565c2f69e16f6c1e6798d673d0b8e0f81faa?apiKey=91a1d4223fb149a1a197b80828621a6c&"
+              alt="Logo"
+              className="w-full"
+            />
+            <form className="mt-10">
+              <div className="mb-5">
                 <IconLabel iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/bdec2657c7b3d519d79ecfb70044210c240c4dcb0bf94173044b674a3ab86a07?apiKey=91a1d4223fb149a1a197b80828621a6c&" label="Matrícula" />
-                <Image
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4c039c1d198cef788cfb1cd2675fd18884150ea8ad71bf67e0ae6dd3d947708?apiKey=91a1d4223fb149a1a197b80828621a6c&"
-                  alt=""
-                  className="mt-5 w-full border-white border-solid aspect-[100] border-[3px] stroke-[3.014px] stroke-white max-md:max-w-full"
+                <input
+                  type="text"
+                  className="mt-2 p-3 w-full border-2 border-white bg-transparent text-white"
+                  placeholder="Digite sua matrícula"
                 />
+              </div>
+              <div className="mb-5">
                 <IconLabel iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/ebbd445098f55900b1e18de17dd2bab72152f02756d5e7d07501f68c845fd423?apiKey=91a1d4223fb149a1a197b80828621a6c&" label="Senha" />
-                <div className="flex overflow-hidden relative flex-col justify-center mt-3.5 border-white border-solid border-[3px] min-h-[4px] stroke-[3.014px] stroke-white max-md:max-w-full">
-                  <Image
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4c039c1d198cef788cfb1cd2675fd18884150ea8ad71bf67e0ae6dd3d947708?apiKey=91a1d4223fb149a1a197b80828621a6c&"
-                    alt=""
-                    className="object-cover absolute inset-0 size-full"
-                  />
-                  <Image
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4c039c1d198cef788cfb1cd2675fd18884150ea8ad71bf67e0ae6dd3d947708?apiKey=91a1d4223fb149a1a197b80828621a6c&"
-                    alt=""
-                    className="w-full border-white border-solid aspect-[100] border-[3px] stroke-[3.014px] stroke-white max-md:max-w-full"
-                  />
-                </div>
-              </form>
-              <a
-                href="#"
-                className="self-end mt-9 text-xl italic text-white underline"
-              >
+                <input
+                  type="password"
+                  className="mt-2 p-3 w-full border-2 border-white bg-transparent text-white"
+                  placeholder="Digite sua senha"
+                />
+              </div>
+              <a href="#" className="text-xl italic underline">
                 Esqueci minha senha
               </a>
-              <button className="justify-center items-center px-16 py-7 mt-12 ml-3.5 text-3xl font-bold text-blue-700 whitespace-nowrap bg-white rounded-lg max-md:px-5 max-md:mt-10 max-md:max-w-full">
+              <button
+                type="submit"
+                className="mt-10 p-4 w-full bg-white text-blue-700 text-2xl font-bold rounded-lg"
+              >
                 Entrar
               </button>
-            </div>
+            </form>
           </div>
         </section>
       </div>
