@@ -1,4 +1,5 @@
 import React from "react";
+import mikelogo from '../assets/mikelogo.svg'
 
 interface ImageProps {
   src: string;
@@ -33,9 +34,9 @@ const Login: React.FC = () => {
           <div className="relative bg-blue-700 bg-opacity-20 w-full h-full" />
         </section>
         <section className="flex flex-col items-end justify-center w-full md:w-3/5 p-0 bg-blue-700 text-white">
-          <div className="w-full max-w-lg pt-100">
+          <div className="w-full max-w-lg pt-50">
             <Image
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a44dae2fcd9b1fbe3574a39c692565c2f69e16f6c1e6798d673d0b8e0f81faa?apiKey=91a1d4223fb149a1a197b80828621a6c&"
+             src={mikelogo}
               alt="Logo"
               className="w-full"
             />
