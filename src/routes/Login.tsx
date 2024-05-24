@@ -22,8 +22,8 @@ const IconLabel: React.FC<IconLabelProps> = ({ iconSrc, label }) => (
 
 const Login: React.FC = () => {
   return (
-    <main className="bg-white min-h-screen flex flex-col items-center justify-center">
-      <div className="flex gap-5 md:flex-row flex-col w-full max-w-6xl">
+    <main className="bg-blue-700 min-h-screen flex flex-col items-center justify-center">
+      <div className="flex gap-0 md:flex-row flex-col w-full max-w-6xl">
         <section className="relative flex flex-col justify-center w-full md:w-2/5 min-h-[1160px]">
           <Image
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/b84e908038c077e02a1562e4f24dbed83f5362f6c75c44829b09b51fbbb407bd?apiKey=91a1d4223fb149a1a197b80828621a6c&"
@@ -32,8 +32,8 @@ const Login: React.FC = () => {
           />
           <div className="relative bg-blue-700 bg-opacity-20 w-full h-full" />
         </section>
-        <section className="flex flex-col items-end justify-center w-full md:w-3/5 p-16 bg-blue-700 text-white">
-          <div className="w-full max-w-lg">
+        <section className="flex flex-col items-end justify-center w-full md:w-3/5 p-0 bg-blue-700 text-white">
+          <div className="w-full max-w-lg pt-100">
             <Image
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a44dae2fcd9b1fbe3574a39c692565c2f69e16f6c1e6798d673d0b8e0f81faa?apiKey=91a1d4223fb149a1a197b80828621a6c&"
               alt="Logo"
