@@ -2,10 +2,13 @@ import ComplaintData from "../components/complaint/ComplaintData";
 import ComplaintMap from "../components/complaint/ComplaintMap";
 import ComplaintTitle from "../components/complaint/ComplaintTitle";
 import SceneData from "../components/complaint/SceneData";
-import ComplaintCTA from "../components/complaint/ComplaintCTA";
+import RightArrow from "../assets/RightArrow.svg";
 import AuthenticatedLayout from "../layouts/AuthenticatedLayout";
+import { useNavigate } from "react-router-dom";
 
 export default function Test() {
+  const navigate = useNavigate();
+
   return (
     <AuthenticatedLayout>
       <section>
@@ -18,7 +21,10 @@ export default function Test() {
               <SceneData />
             </div>
           </div>
-          <ComplaintCTA />
+          <button onClick={() => navigate('/viaturas')} className="bg-bluemike flex items-center px-12 sm:px-32 md:px-32 lg:px-64 h-16 text-white sm:text-md md:text-md lg:text-xl font-bold font-poppins rounded">
+            <span className="mr-2">Encaminhar para viatura</span>
+            <img src={RightArrow} className="w-12" />
+          </button>  
         </div>
       </section>
     </AuthenticatedLayout>

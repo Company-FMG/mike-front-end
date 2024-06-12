@@ -1,6 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
 import AuthenticatedLayout from "../layouts/AuthenticatedLayout";
+import { useNavigate } from "react-router-dom";
+import backArrow from '../assets/backArrow.svg';
+import { useComplaint } from "../contexts/ComplaintContext";
 
 interface FormData {
     situacaoInformada: string;
@@ -11,6 +14,9 @@ interface FormData {
 }
 
 export default function ComplaintRegister(){
+    const complaint = useComplaint();
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState<FormData>({
         situacaoInformada: '',
         endereco: '',
@@ -46,6 +52,8 @@ export default function ComplaintRegister(){
         e.preventDefault();
         
         try {
+            complaint.handleRegisterComplaint(formData.situacaoInformada, formData.endereco, formData.mapa, formData.status, formData.infoCena)
+
             const response = await axios.post('http://localhost:8080/api/denuncias', formData, {
                 headers: {
                     'Content-Type': 'application/json'
@@ -62,6 +70,7 @@ export default function ComplaintRegister(){
                     status: '',
                     infoCena: ''
                 });
+                navigate('/denuncia')
             } else {
                 console.error('Erro ao enviar os dados');
             }
@@ -73,7 +82,10 @@ export default function ComplaintRegister(){
     return(
         <AuthenticatedLayout>
             <div className="mx-40 my-20 px-16 py-11 space-y-20 border-black border-2 rounded-lg">
-                <h2 className="font-bold text-5xl">Cadastro de Nova Denúncia</h2>
+                <div className="flex items-center gap-10">
+                    <button onClick={() => navigate('/home')}><img src={backArrow} alt="" className="w-7" /></button>
+                    <h2 className="font-bold text-5xl">Cadastro de Nova Denúncia</h2>
+                </div>
 
                 <form onSubmit={handleSubmit} action="" className="text-2xl grid gap-10 *:space-x-12 *:*:*:block">
                     <div className="flex">
@@ -82,7 +94,7 @@ export default function ComplaintRegister(){
                             <input onChange={handleChange} name="endereco" type="text" placeholder="Ex: Avenida Dois Rios 359, Ibura, Recife - PE" className="border-black border-2 rounded-lg px-7 py-3 w-full"/>
                         </div>
                         <div className="w-1/3"> 
-                            <label htmlFor="">Mapa (CEP)</label>
+                            <label htmlFor="">Mapa</label>
                             <input onChange={handleChange} name="mapa" type="text" placeholder="Ex: 50000-000" className="border-black border-2 rounded-lg px-7 py-3"/>
                         </div>
                     </div>

@@ -2,6 +2,7 @@ import carroimg from "../assets/carro.svg";
 import pinimg from "../assets/pin.svg";
 import efetivoimg from "../assets/efetivoimg.svg";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Viatura({
   idViatura,
@@ -16,6 +17,7 @@ export default function Viatura({
   efetivo:any,
   areaAtuacao:any
 }) {
+  const navigate = useNavigate();
   const [showMore, setShowMore] = useState(false);
   function handleMoreClick() {
     setShowMore(!showMore);
@@ -70,7 +72,7 @@ export default function Viatura({
                   <b>Área de atuação:</b> {areaAtuacao}
                 </p>
               </div>
-              <button className="bg-white p-4 rounded-lg font-bold text-[#1A23F1] text-[20px] ml-auto self-end">
+              <button onClick={() => navigate('/home')} className="bg-white p-4 rounded-lg font-bold text-[#1A23F1] text-[20px] ml-auto self-end">
                 Atribuir Ocorrencia
               </button>
             </div>
