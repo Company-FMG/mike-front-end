@@ -54,7 +54,7 @@ export default function ComplaintRegister(){
         try {
             complaint.handleRegisterComplaint(formData.situacaoInformada, formData.endereco, formData.mapa, formData.status, formData.infoCena)
 
-            const response = await axios.post('http://localhost:8080/api/denuncias', formData, {
+            const response = await axios.post('https://mike-back-pi4.onrender.com/api/denuncias', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
