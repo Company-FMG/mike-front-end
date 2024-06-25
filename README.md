@@ -11,8 +11,8 @@ Tecnologias utilizadas:
 
 ## Autenticação Provisória
 
-user: user
-senha: password
+- user: user
+- senha: password
 
 ## Como colaborar no projeto?
 
