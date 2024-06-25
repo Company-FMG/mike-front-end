@@ -9,6 +9,11 @@ Tecnologias utilizadas:
 - [TailwindCSS](https://tailwindcss.com) (Framework de estilização)
 - [MambaUI](https://mambaui.com) (Biblioteca de componentes)
 
+## Autenticação Provisória
+
+user: user
+senha: password
+
 ## Como colaborar no projeto?
 
 No VS Code, inicie um terminal `git` e realize os comandos abaixo antes de clonar o repositório.
