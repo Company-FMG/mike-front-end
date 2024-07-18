@@ -1,5 +1,6 @@
 import { useState } from "react";
 import MikeLogoSlogan from '../assets/MikeLogoSlogan.svg';
+import pmDigitalLogo from '../assets/PM Digital Logo.svg';
 import { useNavigate } from 'react-router-dom';
 
 interface ImageProps {
@@ -52,7 +53,7 @@ export default function Login(){
         <section className="flex flex-col items-end justify-center w-full md:w-3/5 pb-80 bg-blue-700 text-white">
           <div className="w-full max-w-lg pr-50 ">
             <Image
-             src={MikeLogoSlogan}
+             src={pmDigitalLogo}
               alt="Logo"
               className="w-full"
             />
