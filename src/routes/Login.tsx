@@ -1,5 +1,4 @@
 import { useState } from "react";
-import MikeLogoSlogan from '../assets/MikeLogoSlogan.svg';
 import pmDigitalLogo from '../assets/PM Digital Logo.svg';
 import { useNavigate } from 'react-router-dom';
 

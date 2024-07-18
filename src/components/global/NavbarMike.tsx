@@ -1,4 +1,3 @@
-import logomike from '../../assets/mikelogo.svg';
 import pmDigitalLogo from '../../assets/PM Digital Logo.svg';
 
 export default function NavbarMike(){
